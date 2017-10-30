@@ -1,0 +1,20 @@
+<ion-header>
+	<ion-navbar>
+		<button menuToggle *ngIf="!selectedItem">
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>关于</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<div class="about">
+		<img src="assets/icon/favicon.ico">
+		<p>测试便签<br>V&nbsp;1.0</p>
+	</div>
+	<ion-list>
+		<button ion-item *ngFor="let item of items"> 
+			{{ item }} 
+		</button>
+	</ion-list>
+</ion-content>

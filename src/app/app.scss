@@ -14,3 +14,32 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+.contact{
+	font-size: 35px;
+	margin-left: 10px;
+}
+
+.btn{
+	font-size: 18px;
+	line-height: 35px;
+	color: gray;
+	margin-left: 15px;
+	cursor:pointer;
+}
+
+.nav-footer {
+	ion-icon{
+		font-size: 35px;
+		margin-left: 10px;
+	}
+
+	.platform-android {
+		ion-header {
+			padding-top: $cordova-md-statusbar-padding;
+			background-color: color($colors,primary);
+		}
+	}
+}
+ 
+

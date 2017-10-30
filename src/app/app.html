@@ -1,8 +1,9 @@
 <ion-menu [content]="content">
 
   <ion-header>
-    <ion-toolbar>
-      <ion-title>Pages</ion-title>
+    <ion-toolbar (click)="login()">
+      <ion-icon class="contact" name="contact" float-start></ion-icon>
+      <div class="btn" float-start >立即登录</div>
     </ion-toolbar>
   </ion-header>
 
@@ -14,6 +15,23 @@
     </ion-list>
   </ion-content>
 
+
+
+  <ion-footer>
+
+    <ion-toolbar (click)="setting()">
+      <div class="nav-footer">
+        <ion-icon name="settings" float-start></ion-icon>
+        <div class="btn" float-start>设置</div>
+      </div>
+    </ion-toolbar>
+    
+  </ion-footer>
+
 </ion-menu>
 
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+
+
+

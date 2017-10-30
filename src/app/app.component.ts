@@ -1,9 +1,15 @@
 import { Component, ViewChild } from '@angular/core';
-
 import { Platform, MenuController, Nav } from 'ionic-angular';
 
+
 import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ListPage } from '../pages/list/list';
+
+import { LoginPage } from '../pages/login/login';
+import { FavoritePage } from '../pages/favorite/favorite';
+import { SettingPage } from '../pages/setting/setting';
+
+
+
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -23,14 +29,15 @@ export class MyApp {
     public platform: Platform,
     public menu: MenuController,
     public statusBar: StatusBar,
-    public splashScreen: SplashScreen
+    public splashScreen: SplashScreen,
   ) {
     this.initializeApp();
 
     // set our app's pages
     this.pages = [
-      { title: 'Hello Ionic', component: HelloIonicPage },
-      { title: 'My First List', component: ListPage }
+      //侧滑页面
+      { title: '首页', component: HelloIonicPage },
+      { title:'我的收藏', component: FavoritePage },
     ];
   }
 
@@ -49,4 +56,13 @@ export class MyApp {
     // navigate to the new page if it is not the current page
     this.nav.setRoot(page.component);
   }
+
+  login(){
+    this.nav.push(LoginPage);
+  }
+
+  setting(){
+    this.nav.push(SettingPage);
+  }
+
 }

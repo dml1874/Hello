@@ -1,25 +1,35 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Hello Ionic</ion-title>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>便签</ion-title>
   </ion-navbar>
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding class="page-hello-ionic">
 
-  <h3>Welcome to your first Ionic app!</h3>
+  <ion-searchbar placeholder="关键字快速搜索"></ion-searchbar>
 
-  <p>
-    This starter project is our way of helping you get a functional app running in record time.
-  </p>
-  <p>
-    Follow along on the tutorial section of the Ionic docs!
-  </p>
-  <p>
-    <button ion-button color="primary" menuToggle>Toggle Menu</button>
-  </p>
+  <ion-list no-lines>
+    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
+      <div class="item-title">
+        {{item.title}}
+      </div>
+      <br>
+      <div class="item-content">
+        {{ item.content }}
+      </div>
+      <br>
+      <br>
+    </button>
+  </ion-list>
+
+
+
+  <ion-fab center bottom>
+    <button ion-fab color="primary" (click)="create()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
 
 </ion-content>

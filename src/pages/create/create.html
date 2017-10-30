@@ -1,0 +1,29 @@
+<ion-header>
+	<ion-navbar>
+		<ion-buttons start menuToggle *ngIf="!selectedItem">
+	      <ion-icon name="menu"></ion-icon>
+	    </ion-buttons>
+	    <ion-title>添加便签</ion-title>
+	    <ion-buttons  end>
+	    	<ion-icon class="icon-checkmark" name="checkmark"></ion-icon>
+	    </ion-buttons>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+
+	<div>
+		<form>	
+			<ion-list>
+				<ion-item>
+					<ion-input name="title" placeholder="note"></ion-input>
+				</ion-item>
+				<ion-item>
+					<textarea name="content" placeholder="content"></textarea>
+				</ion-item>
+			</ion-list>
+
+		</form>
+	</div>
+
+</ion-content>

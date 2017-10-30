@@ -1,0 +1,43 @@
+<ion-header>
+
+  <ion-navbar>
+    <button menuToggle *ngIf="!selectedItem">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>注册</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="page-signup">
+  <form (submit)="doSignup()">
+    <ion-list inset>
+
+      <ion-item>
+        <ion-label floating item-start>手机</ion-label><br><br><br>
+        <ion-input type="text"></ion-input>
+        <span class="note" item-end>| &nbsp; 获取验证码</span>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating item-start>密码</ion-label><br><br><br>
+        <ion-input type="password"></ion-input>
+        <ion-icon class="eye" item-end ios="ios-eye" md="md-eye"></ion-icon>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>验证码</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+      <br>
+      <div padding>
+        <button ion-button color="primary" block>注册</button>
+      </div>
+
+      <ion-item text-center><a>服务协议条款</a></ion-item>
+    </ion-list>
+
+  </form>
+
+</ion-content>

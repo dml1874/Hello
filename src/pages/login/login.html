@@ -1,0 +1,34 @@
+<ion-header>
+	<ion-navbar>
+		<button menuToggle *ngIf="!selectedItem">
+			<ion-icon name="menu"></ion-icon>
+		</button>
+		<ion-title>登录</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content>
+	<form (submit)="doLogin()">
+	    <ion-list inset>
+
+	      <br>
+	      <ion-item>
+	        <ion-input type="text" placeholder="账号/手机/邮箱"></ion-input>
+	      </ion-item>
+	      <br>
+	      <ion-item>
+	        <ion-input type="password" placeholder="密码"></ion-input>
+	      </ion-item>
+	      <br>
+	      <div padding>
+	        <button ion-button color="primary" block>登  &nbsp;&nbsp;&nbsp;  录</button>
+	      </div>
+	      <br><br>
+	      <ion-item>
+	        <a (click)="signup()" float-start>注册</a>
+	        <a float-end>忘记密码</a>
+	      </ion-item>
+
+	    </ion-list>
+	</form>
+</ion-content>
